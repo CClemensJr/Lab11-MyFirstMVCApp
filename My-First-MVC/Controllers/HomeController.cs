@@ -8,5 +8,10 @@ namespace My_First_MVC.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }
