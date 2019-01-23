@@ -27,27 +27,33 @@ namespace My_First_MVC.Models
             // Then do LINQ wuery (with lambda expression) to filter
             // List<timePerson>
             // Return list
-            TimePerson tp1 = new TimePerson();
+            TimePerson timePerson = new TimePerson();
+            TimePerson tp1 = timePerson;
             tp1.Year = 1982;
             tp1.Name = "ChaCha Palov";
             tp1.Honor = "Fed the birds.";
 
-            TimePerson tp2 = new TimePerson();
+            TimePerson tp2 = timePerson;
             tp2.Year = 1984;
             tp2.Name = "HCnast Palov";
             tp2.Honor = "Fed the dogs.";
 
-            TimePerson tp3 = new TimePerson();
+            TimePerson tp3 = timePerson;
             tp3.Year = 1985;
             tp3.Name = "Chattle Pal";
             tp3.Honor = "Fed the cows.";
 
-            TimePerson tp4 = new TimePerson();
+            TimePerson tp4 = timePerson;
             tp4.Year = 1993;
             tp4.Name = "Chaha Ov";
             tp4.Honor = "Fed the people.";
 
-            return null;
+            people.Add(tp1);
+            people.Add(tp2);
+            people.Add(tp3);
+            people.Add(tp4);
+
+            return people;
         }
     }
 }
