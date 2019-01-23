@@ -23,7 +23,7 @@ namespace My_First_MVC.Controllers
         [HttpGet]
         public IActionResult Results()
         {
-            return View();
+            return Redirect(Results.cshtml);
         }
     }
 }
