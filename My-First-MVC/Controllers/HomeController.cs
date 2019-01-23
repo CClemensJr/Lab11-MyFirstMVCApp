@@ -20,10 +20,12 @@ namespace My_First_MVC.Controllers
             return RedirectToAction("Results", new { startYear, endYear });
         }
 
-        //[HttpGet]
-        //public IActionResult Results()
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        public IActionResult Results(int startYear, int endYear)
+        {
+            // Do what we want with the numbers
+
+            return View();
+        }
     }
 }
