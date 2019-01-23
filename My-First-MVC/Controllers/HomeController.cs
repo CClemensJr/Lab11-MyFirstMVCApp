@@ -13,5 +13,17 @@ namespace My_First_MVC.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Index(int startYear, int endYear)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Results()
+        {
+            return View();
+        }
     }
 }
