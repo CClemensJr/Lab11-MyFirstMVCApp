@@ -14,16 +14,16 @@ namespace My_First_MVC.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Index(int startYear, int endYear)
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult Index(int startYear, int endYear)
+        //{
+        //    RedirectToAction("Results", Results);
+        //}
 
-        [HttpGet]
-        public IActionResult Results()
-        {
-            return Redirect(Results.cshtml);
-        }
+        //[HttpGet]
+        //public IActionResult Results()
+        //{
+        //    return View();
+        //}
     }
 }
