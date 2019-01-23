@@ -33,7 +33,7 @@ namespace My_First_MVC
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            
+            app.UseStaticFiles();
         }
     }
 }
