@@ -14,11 +14,11 @@ namespace My_First_MVC.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public IActionResult Index(int startYear, int endYear)
-        //{
-        //    RedirectToAction("Results", Results);
-        //}
+        [HttpPost]
+        public IActionResult Index(int startYear, int endYear)
+        {
+            return RedirectToAction("Results", new { startYear, endYear });
+        }
 
         //[HttpGet]
         //public IActionResult Results()
