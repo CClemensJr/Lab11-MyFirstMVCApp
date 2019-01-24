@@ -16,3 +16,10 @@ h1 {
 h2 {
     font-size: large;
 }
+
+h3 {
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+    background-color: red;
+}
