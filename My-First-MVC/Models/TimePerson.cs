@@ -23,16 +23,29 @@ namespace My_First_MVC.Models
             List<TimePerson> people = new List<TimePerson>();
 
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
-            string personOfTheYearText = File.ReadAllText(path);
-            string[] personOfTheYearArray = personOfTheYearText.Split(',');
+            string[] personOfTheYearData = File.ReadAllLines(path);
+            //string[] personOfTheYearArray = personOfTheYearText.Split(',');
+            //TimePerson[] timePerson = new TimePerson[personOfTheYearArray.Length];
 
             //// iterate through the array and set the values appropriately to a new TimePerson object
-
-            TimePerson personages = new TimePerson();
-
-            for (int i = 0; i < personOfTheYearArray.Length; i++)
+            for (int i = 1; i < personOfTheYearData.Length; i++)
             {
-                Console.WriteLine(personOfTheYearArray[i]);
+                
+
+                people.Add(new TimePerson
+                {
+                    Year = 1980,
+                    Honor = personOfTheYearData[i],
+                    Name = personOfTheYearData[i],
+                    //Country = personOfTheYearData[i],
+                    //BirthYear = int.Parse(personOfTheYearData[i]),
+                    //DeathYear = int.Parse(personOfTheYearData[i]),
+                    //Title = personOfTheYearData[i],
+                    //Category = personOfTheYearData[i],
+                    //Context = personOfTheYearData[i]
+                });
+
+                //people.Add(timePerson[i]);
             }
 
             // Create full list of people from csv
