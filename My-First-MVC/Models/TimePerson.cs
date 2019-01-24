@@ -29,7 +29,7 @@ namespace My_First_MVC.Models
             // iterate through the array and set the values appropriately to a new TimePerson object
             foreach (string person in personOfTheYearArray)
             {
-                
+                 
             }
 
             // CSV is comma delimited
