@@ -18,19 +18,23 @@ namespace My_First_MVC.Models
         public string Category { get; set; } = "Data not provided";
         public string Context { get; set; } = "Data not provided";
 
+        /// <summary>
+        /// This method receives two arguments from the controller, a startYear and an endYear. The method then reads data from a csv file to a string array, creates a list to hold TimePerson objects, then iterates over the string array, splitting the string up, instantiating an object, and assigning the values to the appropriate property. The object is then added to a list that is filtered based on the range of years between start year and end year. This filtered list is then sent back to the controller.
+        /// </summary>
+        /// <param name="startYear"></param>
+        /// <param name="endYear"></param>
+        /// <returns></returns>
         public static List<TimePerson> GetPersons(int startYear, int endYear)
         {
-            List<TimePerson> people = new List<TimePerson>();
-
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
             string[] personOfTheYearData = File.ReadAllLines(path);
 
-            // iterate through the array and set the values appropriately to a new TimePerson object
+            List<TimePerson> people = new List<TimePerson>();
+
             for (int i = 1; i < personOfTheYearData.Length; i++)
             {
                 var dataString = personOfTheYearData[i].Split(',');
 
-                // Create full list of people from csv
                 people.Add(new TimePerson()
                 {
                     Year = (dataString[0] == "") ? 0 : Convert.ToInt32(dataString[0]),
@@ -45,9 +49,7 @@ namespace My_First_MVC.Models
                 });
             }
 
-            // Then do LINQ wuery (with lambda expression) to filter
             List<TimePerson> filteredPeople = people.Where(p => p.Year >= startYear && p.Year <= endYear).ToList();
-            // Return list
 
             return filteredPeople;
         }
