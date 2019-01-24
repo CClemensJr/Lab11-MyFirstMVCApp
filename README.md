@@ -4,7 +4,7 @@
 ## summary
 ```
 	The purpose of this application is to present you with the people that were Time Magazine's
-  Person of the Year during the range specified.
+  	Person of the Year during the range specified.
 ```
 
 ## example
@@ -13,8 +13,8 @@
 ## usage
 ```
 	1. Enter the start and end years.
-  2. Press Submit.
-  3. Peruse the results.
+	2. Press Submit.
+	3. Peruse the results.
 ```
 
 
