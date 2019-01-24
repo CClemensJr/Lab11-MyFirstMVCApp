@@ -22,18 +22,18 @@ namespace My_First_MVC.Models
         {
             List<TimePerson> people = new List<TimePerson>();
 
-            //string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../wwwroot/personOfTheYear.csv");
-            //string personOfTheYearText = File.ReadAllText(path);
-            //string[] personOfTheYearArray = personOfTheYearText.Split(',');
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
+            string personOfTheYearText = File.ReadAllText(path);
+            string[] personOfTheYearArray = personOfTheYearText.Split(',');
 
             //// iterate through the array and set the values appropriately to a new TimePerson object
 
-            //TimePerson personages = new TimePerson();
+            TimePerson personages = new TimePerson();
 
-            //for (int i = 0; i < personOfTheYearArray.Length; i++)
-            //{
-            //    Console.WriteLine(personOfTheYearArray[i]);
-            //}
+            for (int i = 0; i < personOfTheYearArray.Length; i++)
+            {
+                Console.WriteLine(personOfTheYearArray[i]);
+            }
 
             // Create full list of people from csv
             // Then do LINQ wuery (with lambda expression) to filter
