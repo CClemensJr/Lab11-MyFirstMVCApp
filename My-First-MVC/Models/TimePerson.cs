@@ -30,6 +30,7 @@ namespace My_First_MVC.Models
             {
                 var dataString = personOfTheYearData[i].Split(',');
 
+                // Create full list of people from csv
                 people.Add(new TimePerson()
                 {
                     Year = (dataString[0] == "") ? 0 : Convert.ToInt32(dataString[0]),
@@ -44,36 +45,11 @@ namespace My_First_MVC.Models
                 });
             }
 
-            // Create full list of people from csv
             // Then do LINQ wuery (with lambda expression) to filter
-            // List<timePerson>
+            List<TimePerson> filteredPeople = people.Where(p => p.Year >= startYear && p.Year <= endYear).ToList();
             // Return list
-            TimePerson tp1 = new TimePerson();
-            tp1.Year = 1982;
-            tp1.Name = "ChaCha Palov";
-            tp1.Honor = "Fed the birds.";
 
-            TimePerson tp2 = new TimePerson();
-            tp2.Year = 1984;
-            tp2.Name = "HCnast Palov";
-            tp2.Honor = "Fed the dogs.";
-
-            TimePerson tp3 = new TimePerson();
-            tp3.Year = 1985;
-            tp3.Name = "Chattle Pal";
-            tp3.Honor = "Fed the cows.";
-
-            TimePerson tp4 = new TimePerson();
-            tp4.Year = 1993;
-            tp4.Name = "Chaha Ov";
-            tp4.Honor = "Fed the people.";
-
-            people.Add(tp1);
-            people.Add(tp2);
-            people.Add(tp3);
-            people.Add(tp4);
-
-            return people;
+            return filteredPeople;
         }
     }
 }
