@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace My_First_MVC.Models
 {
@@ -21,8 +22,12 @@ namespace My_First_MVC.Models
         {
             List<TimePerson> people = new List<TimePerson>();
             // read in file
+            string path = "~/personOfTheYear.csv";
+            string personOfTheYearText = File.ReadAllText(path);
+            string[] personOfTheYearArray = personOfTheYearText.Split(',');
 
             // iterate through the array and set the values appropriately to a new TimePerson object
+
             // CSV is comma delimited
             // Create full list of people from csv
             // Then do LINQ wuery (with lambda expression) to filter
