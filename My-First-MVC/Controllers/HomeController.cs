@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using My_First_MVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,8 @@ namespace My_First_MVC.Controllers
         [HttpGet]
         public IActionResult Results(int startYear, int endYear)
         {
-            // Do what we want with the numbers
-
-            return View();
+            // Do what we want with the number
+            return View(TimePerson.GetPersons(startYear, endYear));
         }
     }
 }

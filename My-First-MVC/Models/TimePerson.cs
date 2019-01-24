@@ -21,29 +21,29 @@ namespace My_First_MVC.Models
         {
             List<TimePerson> people = new List<TimePerson>();
             // read in file
+
             // iterate through the array and set the values appropriately to a new TimePerson object
             // CSV is comma delimited
             // Create full list of people from csv
             // Then do LINQ wuery (with lambda expression) to filter
             // List<timePerson>
             // Return list
-            TimePerson timePerson = new TimePerson();
-            TimePerson tp1 = timePerson;
+            TimePerson tp1 = new TimePerson();
             tp1.Year = 1982;
             tp1.Name = "ChaCha Palov";
             tp1.Honor = "Fed the birds.";
 
-            TimePerson tp2 = timePerson;
+            TimePerson tp2 = new TimePerson();
             tp2.Year = 1984;
             tp2.Name = "HCnast Palov";
             tp2.Honor = "Fed the dogs.";
 
-            TimePerson tp3 = timePerson;
+            TimePerson tp3 = new TimePerson();
             tp3.Year = 1985;
             tp3.Name = "Chattle Pal";
             tp3.Honor = "Fed the cows.";
 
-            TimePerson tp4 = timePerson;
+            TimePerson tp4 = new TimePerson();
             tp4.Year = 1993;
             tp4.Name = "Chaha Ov";
             tp4.Honor = "Fed the people.";
