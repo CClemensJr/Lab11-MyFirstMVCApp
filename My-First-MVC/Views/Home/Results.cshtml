@@ -10,13 +10,39 @@
     <h1>Persons of the Years</h1>
     <h2>Years</h2>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Name</th>
+                <th>Honor</th>
+                <th>Country</th>
+                <th>Date of Birth</th>
+                <th>Expiration Date</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>What They Did:</th>
+            </tr>
+        </thead>
+        <tbody>
 
-    @foreach (var item in @Model)
-    {
-        <h3>@item.Year</h3>
-        <h3>@item.Name</h3>
-        <h3>@item.Honor</h3>
-    }
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td>@item.Year</td>
+                    <td>@item.Name</td>
+                    <td>@item.Honor</td>
+                    <td>@item.Country</td>
+                    <td>@item.BirthYear</td>
+                    <td>@item.DeathYear</td>
+                    <td>@item.Title</td>
+                    <td>@item.Category</td>
+                    <td>@item.Context</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
 
 </body>
 </html>
