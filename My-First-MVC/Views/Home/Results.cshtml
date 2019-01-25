@@ -1,0 +1,22 @@
+﻿@model List<My_First_MVC.Models.TimePerson>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Persons of the Years</h1>
+    <h2>Years</h2>
+
+
+    @foreach (var item in @Model)
+    {
+        <h3>@item.Year</h3>
+        <h3>@item.Name</h3>
+        <h3>@item.Honor</h3>
+    }
+
+</body>
+</html>
