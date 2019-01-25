@@ -8,8 +8,8 @@
     background-color: darkgray;
     border: 10px solid red;
     height: 80%;
-    margin: auto;
-    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 h1 {
@@ -20,6 +20,12 @@ h1 {
 
 h2 {
     font-size: large;
+    text-align: center;
+}
+
+form {
+    height: 80%;
+    margin: 5%;
     text-align: center;
 }
 
