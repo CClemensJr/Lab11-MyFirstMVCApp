@@ -1,5 +1,7 @@
 ﻿body {
     background-color: lightgray;
+    height: 100%;
+    width: 100%;
 }
 
 #background {
@@ -11,17 +13,22 @@
 }
 
 h1 {
-    font-size: xx-large;
     color: gray;
+    font-size: xx-large;
+    text-align: center;
 }
 
 h2 {
     font-size: large;
+    text-align: center;
 }
 
-h3 {
-    font-size: 12px;
+
+table, th, td {
+    background: black;
+    border: 1px solid red;
     color: white;
-    font-weight: 600;
-    background-color: red;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
 }
