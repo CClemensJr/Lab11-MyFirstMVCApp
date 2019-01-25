@@ -40,12 +40,12 @@ namespace My_First_MVC.Models
                     Year = (dataString[0] == "") ? 0 : Convert.ToInt32(dataString[0]),
                     Honor = dataString[1],
                     Name = dataString[2],
-                    Country = personOfTheYearData[3],
+                    Country = dataString[3],
                     BirthYear = (dataString[4] == "") ? 0 : Convert.ToInt32(dataString[4]),
                     DeathYear = (dataString[5] == "") ? 0 : Convert.ToInt32(dataString[5]),
-                    Title = personOfTheYearData[6],
-                    Category = personOfTheYearData[7],
-                    Context = personOfTheYearData[8]
+                    Title = dataString[6],
+                    Category = dataString[7],
+                    Context = dataString[8]
                 });
             }
 
